@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <title>Todo list</title>
+<script defer src="main.js"></script></head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <nav class="projects-nav navDiv">
+            <h2 class="projects__nav-title sidebarTitle">Projects</h2>
+            <ul class="projects__nav-list navUl"></ul>
+        </nav>
+        <div class="quick-filters navDiv">
+            <h2 class="sidebarTitle">Quick Filters</h2>
+            <ul class="navUl">
+                <li><a href="#All tasks" class="filter-allTasks nav-button">All tasks</a></li>
+                <li><a href="#Today" class="filter-today nav-button">Today</a></li>
+                <li><a href="#Tomorrow" class="filter-tomorrow nav-button">Tomorrow</a></li>
+                <li><a href="#This week" class="filter-week nav-button">This week</a></li>
+            </ul>
+        </div>
+    </aside>
+    <main class="content">
+        <header class="header">
+            <a class="burgerMenu-button" href="#Menu"><i class="fa-solid fa-bars"></i></a>
+            <div class="header-content">
+                <div class="current-projectDiv">
+                    <h2 id="current-project"></h2>
+                </div>
+                <div class="actionsDiv">
+                    <button class="action-button" type="button" id="action-newTask">New task</button>
+                    <button class="action-button" type="button" id="action-newProject">New project</button>
+                    <a class="action-button" href="#black" id="action-changeTheme"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                </div>
+            </div>
+        </header>
+        <div class="tasks-container"></div>
+    </main>
+    <dialog class="dialogWindow" id="dialogWindow">
+    </dialog>
+</body>
+</html>
