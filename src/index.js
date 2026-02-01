@@ -117,10 +117,24 @@ const sideBar = document.querySelector(".sidebar");
 
 burgerMenuButton.addEventListener("click", () => {
     sideBar.classList.toggle("active");
+    main.classList.toggle("blackout");
+    
+    const blackout = document.querySelector("main.blackout");
+    blackout.addEventListener("click", (e) => {
+        console.log(e.target);
+        if (e.target == main) {
+            sideBar.classList.remove("active");
+            main.classList.remove("blackout");
+        }
+    })
 })
 
+
+
 sideBar.addEventListener("click", (e) => {
+    console.log(e.target);
     if (e.target.tagName === "A") {
         sideBar.classList.remove("active");
+        main.classList.remove("blackout");
     }
 })
